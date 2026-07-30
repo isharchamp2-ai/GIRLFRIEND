@@ -5,10 +5,15 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const PORT = 8420;
+const PORT = process.env.PORT || 8420;
 
 // Middleware
-app.use(cors());
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 app.use(express.json());
 
 // Setup storage directories
