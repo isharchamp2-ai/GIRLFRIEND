@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Surprise 💌</title>
+  <meta name="description" content="Someone special made this just for you." />
+  <meta property="og:title" content="Open your surprise 💌" />
+  <meta property="og:description" content="Someone made something special just for you..." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/experience.css" />
+</head>
+<body>
+  <!-- Music Player (hidden) -->
+  <audio id="bgAudio" loop preload="none"></audio>
+  
+  <!-- Music Toggle -->
+  <button class="music-toggle" id="musicToggle" title="Toggle music">
+    <span class="music-icon-anim" id="musicIconAnim">🎵</span>
+  </button>
+
+  <!-- Floating Hearts -->
+  <div class="hearts-bg" id="heartsBg"></div>
+  <!-- Sparkles / Particles -->
+  <div class="sparkles-bg" id="sparklesBg"></div>
+
+  <!-- ================================
+       SECTION 1: Landing Gate
+       ================================ -->
+  <section class="landing-gate" id="landingGate">
+    <div class="gate-bg">
+      <div class="gate-gradient"></div>
+    </div>
+    <div class="gate-particles" id="gateParticles"></div>
+    <div class="gate-content">
+      <div class="gate-sparkle">✨</div>
+      <h1 class="gate-name" id="gateName">Hey ...</h1>
+      <p class="gate-tagline" id="gateTagline">I made something special<br/>just for you...</p>
+      <button class="gate-btn" id="openBtn">
+        <span class="gate-btn-text">Open Your Surprise 💌</span>
+        <div class="gate-btn-ring"></div>
+      </button>
+      <p class="gate-hint">↓ scroll to see it all</p>
+    </div>
+    <!-- Floating Photo Peeks -->
+    <div class="gate-photo-peeks" id="gatePhotoPeeks"></div>
+  </section>
+
+  <!-- ================================
+       SECTION 2: Opening — Her Name
+       ================================ -->
+  <section class="section-opening" id="sectionOpening">
+    <div class="opening-bg"></div>
+    <div class="opening-content">
+      <div class="opening-tag">Just for you</div>
+      <h2 class="opening-name" id="openingName">Hey ...</h2>
+      <div class="opening-divider">
+        <span class="div-heart">❤️</span>
+      </div>
+      <p class="opening-text">
+        I know I don't say it enough, but you mean more to me than you know.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================
+       SECTION 3: Photo Memories
+       ================================ -->
+  <section class="section-photos" id="sectionPhotos">
+    <div class="photos-header">
+      <div class="ph-tag">Our Memories</div>
+      <h2 class="ph-title">The moments that matter</h2>
+    </div>
+    <div class="photos-gallery" id="photosGallery">
+      <!-- Photos injected by JS -->
+    </div>
+    <div class="photos-footer-text">
+      Every photo is a reminder that I'm the luckiest person alive 🌸
+    </div>
+  </section>
+
+  <!-- ================================
+       SECTION 4: Love Letter
+       ================================ -->
+  <section class="section-letter" id="sectionLetter">
+    <div class="letter-bg"></div>
+    <div class="letter-container">
+      <div class="letter-paper">
+        <div class="letter-header">
+          <span class="letter-to" id="letterTo">To my person,</span>
+          <div class="letter-deco">💌</div>
+        </div>
+        <div class="letter-body">
+          <p class="letter-text" id="letterText"></p>
+          <div class="letter-cursor" id="letterCursor">|</div>
+        </div>
+        <div class="letter-footer">
+          <div class="letter-date" id="letterDate"></div>
+          <div class="letter-sig" id="letterSig">with love ❤️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       SECTION 5: Interactive Balloon
+       ================================ -->
+  <section class="section-balloon" id="sectionBalloon">
+    <div class="balloon-bg"></div>
+    <div class="balloon-content" id="balloonContent">
+      <p class="balloon-prompt">I have one more thing for you...</p>
+      <div class="balloon-wrap" id="balloonWrap">
+        <div class="balloon" id="mainBalloon">🎈</div>
+        <p class="balloon-tap">Tap this 🎈</p>
+      </div>
+      <div class="balloon-revealed" id="balloonRevealed">
+        <div class="revealed-heart">❤️</div>
+        <p class="revealed-text">Okay... I have one more thing to tell you ❤️</p>
+        <p class="revealed-msg">You make my world a little more beautiful every single day.</p>
+      </div>
+    </div>
+    <!-- Confetti container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+    <!-- Balloon burst container -->
+    <div class="burst-container" id="burstContainer"></div>
+  </section>
+
+  <!-- ================================
+       SECTION 6: Final Cinematic Message
+       ================================ -->
+  <section class="section-final" id="sectionFinal">
+    <div class="final-bg">
+      <div class="final-gradient"></div>
+    </div>
+    <div class="final-stars" id="finalStars"></div>
+    <div class="final-content">
+      <div class="final-emoji-ring" id="finalEmojiRing">
+        <span class="fer">💕</span><span class="fer">✨</span>
+        <span class="fer">🌸</span><span class="fer">❤️</span>
+      </div>
+      <h2 class="final-name" id="finalName">...</h2>
+      <div class="final-divider"></div>
+      <p class="final-line1">Thank you for being you.</p>
+      <p class="final-line2">You are my favorite person, my favorite memory,<br/>and my favorite part of every day.</p>
+      <div class="final-occasions">
+        <span class="final-occasion" id="finalOccasion">Happy National Girlfriends Day 💕</span>
+      </div>
+      <div class="final-from" id="finalFrom"></div>
+      <div class="final-hearts-anim" id="finalHeartsAnim"></div>
+    </div>
+    <!-- Viral footer -->
+    <div class="create-own">
+      <a href="../index.html" class="create-own-link">
+        Create your own surprise ❤️
+      </a>
+    </div>
+  </section>
+
+  <script src="../js/experience.js"></script>
+</body>
+</html>

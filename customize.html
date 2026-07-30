@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customize Her Surprise – LoveBox</title>
+  <meta name="description" content="Personalize a romantic surprise website for your girlfriend in 2 minutes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/customize.css" />
+</head>
+<body>
+  <!-- Ambient Background -->
+  <div class="ambient-bg">
+    <div class="amb-orb orb1"></div>
+    <div class="amb-orb orb2"></div>
+    <div class="amb-orb orb3"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">LoveBox 💌</a>
+      <div class="nav-steps">
+        <div class="nav-step active" data-s="1">1 · Personalize</div>
+        <div class="nav-step-arrow">›</div>
+        <div class="nav-step" data-s="2">2 · Demo Sample</div>
+        <div class="nav-step-arrow">›</div>
+        <div class="nav-step" data-s="3">3 · Pay &amp; Share</div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <!-- LEFT: Form Panel -->
+    <div class="form-panel">
+      <div class="form-header">
+        <h1>Customize Her Surprise ❤️</h1>
+        <p>Fill in the details and watch the magic build itself</p>
+      </div>
+
+      <!-- Step 1: Names & Message -->
+      <div class="form-section">
+        <div class="section-label">
+          <span class="sl-num">01</span>
+          <span class="sl-text">Names &amp; Message</span>
+        </div>
+        <div class="form-group">
+          <label for="gfName">Her Name <span class="req">*</span></label>
+          <input type="text" id="gfName" placeholder="e.g. Priya, Anjali, Sofia..." maxlength="40" />
+          <div class="char-count" id="gfNameCount">0/40</div>
+        </div>
+        <div class="form-group">
+          <label for="userEmail">Your Email <span class="req">*</span></label>
+          <input type="email" id="userEmail" placeholder="for delivery of website link..." required />
+        </div>
+        <div class="form-group">
+          <label for="bfName">Your Name <span class="opt">(optional)</span></label>
+          <input type="text" id="bfName" placeholder="Your name or nickname..." maxlength="40" />
+        </div>
+        <div class="form-group">
+          <label for="specialDate">Special Date <span class="opt">(optional)</span></label>
+          <input type="date" id="specialDate" />
+        </div>
+        <div class="form-group">
+          <label for="loveMessage">Your Message <span class="req">*</span></label>
+          <textarea id="loveMessage" rows="5" placeholder="Write your heart out... Tell her what she means to you." maxlength="500"></textarea>
+          <div class="char-count" id="msgCount">0/500</div>
+        </div>
+      </div>
+
+      <!-- Step 2: Photos -->
+      <div class="form-section">
+        <div class="section-label">
+          <span class="sl-num">02</span>
+          <span class="sl-text">Your Photos (3–8)</span>
+        </div>
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-icon">📸</div>
+          <p class="upload-title">Drop your favorite photos here</p>
+          <p class="upload-sub">or tap to browse · JPG, PNG, WebP · max 5MB each</p>
+          <input type="file" id="photoInput" multiple accept="image/jpeg,image/png,image/webp" style="display:none" />
+        </div>
+        <div class="photo-preview-grid" id="photoGrid"></div>
+        <p class="photo-count" id="photoCount">0 of 3–8 photos added</p>
+      </div>
+
+      <!-- Step 3: Theme -->
+      <div class="form-section">
+        <div class="section-label">
+          <span class="sl-num">03</span>
+          <span class="sl-text">Choose a Theme</span>
+        </div>
+        <div class="themes-grid" id="themesGrid">
+          <div class="theme-card active" data-theme="rose" id="theme-rose">
+            <div class="theme-preview t-rose"></div>
+            <span>Rose Dream</span>
+            <div class="theme-check">✓</div>
+          </div>
+          <div class="theme-card" data-theme="lavender" id="theme-lavender">
+            <div class="theme-preview t-lavender"></div>
+            <span>Lavender Mist</span>
+            <div class="theme-check">✓</div>
+          </div>
+          <div class="theme-card" data-theme="midnight" id="theme-midnight">
+            <div class="theme-preview t-midnight"></div>
+            <span>Midnight Magic</span>
+            <div class="theme-check">✓</div>
+          </div>
+          <div class="theme-card" data-theme="golden" id="theme-golden">
+            <div class="theme-preview t-golden"></div>
+            <span>Golden Hour</span>
+            <div class="theme-check">✓</div>
+          </div>
+          <div class="theme-card" data-theme="sakura" id="theme-sakura">
+            <div class="theme-preview t-sakura"></div>
+            <span>Sakura Spring</span>
+            <div class="theme-check">✓</div>
+          </div>
+          <div class="theme-card" data-theme="ocean" id="theme-ocean">
+            <div class="theme-preview t-ocean"></div>
+            <span>Ocean Dreamer</span>
+            <div class="theme-check">✓</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Music -->
+      <div class="form-section">
+        <div class="section-label">
+          <span class="sl-num">04</span>
+          <span class="sl-text">Background Music</span>
+        </div>
+        <div class="music-options" id="musicOptions">
+          <div class="music-card active" data-music="none" id="music-none">
+            <div class="music-icon">🔇</div>
+            <div class="music-info">
+              <span class="music-name">No Music</span>
+              <span class="music-desc">Silent surprise</span>
+            </div>
+            <div class="music-check">✓</div>
+          </div>
+          <div class="music-card" data-music="romantic_piano" id="music-romantic_piano">
+            <div class="music-icon">🎹</div>
+            <div class="music-info">
+              <span class="music-name">Romantic Piano</span>
+              <span class="music-desc">Soft, emotional piano melody</span>
+            </div>
+            <div class="music-check">✓</div>
+          </div>
+          <div class="music-card" data-music="acoustic_love" id="music-acoustic_love">
+            <div class="music-icon">🎸</div>
+            <div class="music-info">
+              <span class="music-name">Acoustic Love</span>
+              <span class="music-desc">Warm acoustic guitar</span>
+            </div>
+            <div class="music-check">✓</div>
+          </div>
+          <div class="music-card" data-music="dreamy_ambient" id="music-dreamy_ambient">
+            <div class="music-icon">🌙</div>
+            <div class="music-info">
+              <span class="music-name">Dreamy Ambient</span>
+              <span class="music-desc">Soft cinematic atmosphere</span>
+            </div>
+            <div class="music-check">✓</div>
+          </div>
+          <div class="music-card" data-music="lofi_romance" id="music-lofi_romance">
+            <div class="music-icon">🎧</div>
+            <div class="music-info">
+              <span class="music-name">Lo-fi Romance</span>
+              <span class="music-desc">Chill lo-fi beats</span>
+            </div>
+            <div class="music-check">✓</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="form-cta">
+        <button class="preview-btn" id="previewBtn" onclick="generatePreview()">
+          ✨ Proceed to Pay ₹79
+        </button>
+      </div>
+    </div>
+
+    <!-- RIGHT: Demo Sample -->
+    <div class="preview-panel" id="previewPanel">
+      <div class="preview-label">Demo Sample</div>
+      <div class="preview-phone">
+        <div class="prev-phone-frame">
+          <div class="pn-notch"></div>
+          <div class="pn-screen" id="previewScreen">
+            <div class="pn-bg" id="pnBg">
+              <div class="pn-gradient"></div>
+            </div>
+            <div class="pn-hearts" id="pnHearts">
+              <span class="ph">💕</span><span class="ph">❤️</span>
+              <span class="ph">✨</span><span class="ph">🌸</span>
+            </div>
+            <div class="pn-content" id="pnContent">
+              <p class="pn-hey" id="pnHey">Hey <span>Priya</span> ❤️</p>
+              <p class="pn-sub">I made something<br/>special just for you...</p>
+              <div class="pn-open-btn">Open Your Surprise 💌</div>
+            </div>
+            <div class="pn-msg-prev" id="pnMsg">
+              <div class="pn-msg-inner">
+                <p id="pnMsgText">Every morning I wake up and think of you first. You are the reason I smile...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="prev-glow"></div>
+      </div>
+      <div class="preview-info">
+        <div class="prev-info-row">
+          <span>🎨</span>
+          <span id="prevThemeLabel">Theme: Rose Dream</span>
+        </div>
+        <div class="prev-info-row">
+          <span>📸</span>
+          <span id="prevPhotosLabel">Photos: 0 added</span>
+        </div>
+        <div class="prev-info-row">
+          <span>🎵</span>
+          <span id="prevMusicLabel">Music: No Music</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-icon">💌</div>
+      <h2 class="modal-title">Almost There!</h2>
+      <div class="modal-sub">Scan the QR code below to pay ₹79 manually.</div>
+      
+      <!-- Custom Paytm Scanner UI -->
+      <div style="margin: 20px auto; width: 260px; background: linear-gradient(to bottom, #00baf2 50%, #002e6e 50%); border-radius: 20px; padding: 10px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+         <div style="margin-bottom: 5px; color: white; display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 40px; height: 40px; background: #34d399; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; margin-bottom: 5px;">AK</div>
+            <div style="font-weight: bold; font-size: 14px; display: flex; align-items: center; gap: 4px;">ASIS KAUR <span style="color: #3b82f6; font-size: 16px;">✔</span></div>
+         </div>
+         <div style="background: white; border-radius: 15px; width: 240px; padding: 15px 0; text-align: center;">
+            <div style="font-weight: 800; font-size: 18px; color: #002e6e; margin-bottom: 15px;">paytm <span style="color: #ef4444;">❤</span> <span style="font-style: italic;">UPI</span></div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi%3A%2F%2Fpay%3Fpa%3D9667226009%40ptsbi%26pn%3DASIS%2520KAUR%26cu%3DINR" alt="Paytm Scanner" style="width: 180px; height: 180px; display: block; margin: 0 auto;" />
+            <div style="margin-top: 15px; font-size: 14px; color: #333; font-weight: 500;">
+              <span style="color: #10b981;">▶</span> 9667226009@ptsbi
+            </div>
+         </div>
+      </div>
+      <!-- End Custom Paytm Scanner -->
+      <div class="modal-features">
+        <div class="mf-item">✅ Scan QR to Pay manually</div>
+        <div class="mf-item">✅ Send screenshot on Instagram DM</div>
+        <div class="mf-item" style="color: #f1ef10; font-weight: bold;">✅ You will surely receive your website link in your email within 15 minutes!</div>
+      </div>
+      <button class="pay-btn" id="payBtn" onclick="initiatePayment()">
+        <span>Done paying, Send Screenshot</span>
+        <div class="btn-shimmer"></div>
+      </button>
+      <p class="modal-note">✅ Please keep your payment screenshot ready</p>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-box success-box">
+      <div class="success-emojis">
+        <span class="se">🎉</span><span class="se">❤️</span><span class="se">🎊</span>
+      </div>
+      <h2 class="modal-title">Your Surprise is Ready! ❤️</h2>
+      <p class="modal-sub">Send this link to her and wait for her reaction 👀</p>
+      <div class="link-box">
+        <span class="link-text" id="generatedLink">lovebox.in/love/username123</span>
+        <button class="copy-btn" id="copyBtn" onclick="copyLink()">Copy</button>
+      </div>
+      <div class="share-btns">
+        <a class="share-btn whatsapp" id="waShareBtn" href="#" onclick="shareWhatsApp(event)">
+          <span>📲</span> Share on WhatsApp
+        </a>
+        <button class="share-btn preview" onclick="previewSurprise()">
+          <span>👁️</span> Preview Surprise
+        </button>
+      </div>
+      <div class="viral-footer">
+        <a href="index.html">Create your own surprise ❤️</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/customize.js"></script>
+</body>
+</html>
